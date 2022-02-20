@@ -1,10 +1,10 @@
 // Overall bracket dims
-width = 178;
+width = 175;
 thickness = 12;
 height = 70;
 
 // Position of mounting holes, measured from nearest edge
-mounting_hole_1 = 25;
+mounting_hole_1 = 22;
 mounting_hole_2 = width - 5;
 
 // GPU dims
@@ -26,7 +26,7 @@ hole_size = 2;          // Sized to fit 3mm self-tapping screw.
 hole_depth = 12;
 
 // Tolerance
-tolerance = 0.5;
+tolerance = 0.25;
 
 lower_height = height - cooler_height - pci_height;
 $fn = 100;
