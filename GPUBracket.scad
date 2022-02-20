@@ -52,6 +52,14 @@ module bracket_gen() {
                 }
             } 
         }
+        translate([0, thickness, 0]) {
+            difference() {
+                cube([pci_edge, pci_thickness*2, height]);
+                translate([0, 0, cooler_height]) {
+                    cube([pci_edge, pci_thickness, pci_height]);
+                }
+            }
+        }        
     }
 }
 

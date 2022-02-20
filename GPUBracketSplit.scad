@@ -55,6 +55,14 @@ module bracket_gen() {
                 }
             } 
         }
+        translate([0, thickness, 0]) {
+            difference() {
+                cube([pci_edge, pci_thickness*2, height]);
+                translate([0, 0, cooler_height]) {
+                    cube([pci_edge, pci_thickness, pci_height]);
+                }
+            }
+        }        
     }
 }
 
@@ -62,7 +70,7 @@ module bracket_gen() {
 /* creates a mask to split the bracket. Adds some mortice and tenon joints for gluing */
 module bracket_mask(t = 0) {
     union() {
-        cube([width/2, thickness, height]);
+        cube([width/2, thickness + pci_thickness*2, height]);
         translate([width/2, thickness/4 - t, height - 3*lower_height/4 - t]) {
             cube([thickness + t, thickness/2 + 2 * t, lower_height/2 + 2 * t]);
         }
